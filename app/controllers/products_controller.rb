@@ -6,6 +6,9 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find params[:id]
+    @msg = "TES TEST TEST TEST "
+    @is_disabled = '5'
+    # @is_disabled = @product.quantity < 1
   end
 
 end
