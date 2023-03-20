@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
 
   def show
+    # pass products here?
     @order = Order.find(params[:id])
   end
 
