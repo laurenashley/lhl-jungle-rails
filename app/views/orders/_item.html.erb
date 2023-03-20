@@ -1,14 +1,14 @@
 <tr>
   <th colspan="2">
-    <h4></h4>
+    <h4><%= product %></h4>
   </th>
   <th>
-    <%= humanized_money_with_symbol price / 100.0 %>
+    <%= humanized_money_with_symbol price %>
   </th>
   <th>
     <%= quantity %>
   </th>
   <th>
-    <%= humanized_money_with_symbol item_total / 100.0 %>
+    <%= humanized_money_with_symbol item_total %>
   </th>
 </tr>
