@@ -1,7 +1,6 @@
 class OrdersController < ApplicationController
 
   def show
-    # pass products here?
     @order = Order.find(params[:id])
   end
 
@@ -37,7 +36,6 @@ class OrdersController < ApplicationController
   end
 
   def create_order(stripe_charge)
-    puts "HELLO!!!!!!!"
     order = Order.new(
       email: params[:stripeEmail],
       total_cents: cart_subtotal_cents,
@@ -45,7 +43,6 @@ class OrdersController < ApplicationController
     )
 
     enhanced_cart.each do |entry|
-      # need to get product here, this is broken...?
       product = entry[:product]
       quantity = entry[:quantity]
       order.line_items.new(

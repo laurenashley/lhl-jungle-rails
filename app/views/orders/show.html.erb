@@ -5,7 +5,7 @@
   </header>
 
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order, <%= @order.email %>!</h4>
+    <h4>Thank you for your order, <span class="text-success"><%= @order.email %></span>!</h4>
     <h5>The following items are in this order:</h5>
   </div>
   <div class="panel panel-default items">
@@ -21,10 +21,10 @@
       <tbody>
         <% @order.line_items.each do |item| %>
           <%= render 'item', 
-            product: item[:product],
-            price: item[:item_price].to_i,
+            product: item.product,
+            price: item.item_price.to_i,
             quantity: item[:quantity].to_i,
-            item_total: item[:total_price].to_i
+            item_total: item.total_price.to_i
           %>
         <% end %>
       </tbody>
