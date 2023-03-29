@@ -1,4 +1,4 @@
-describe('example to-do app', () => {
+describe('homepage', () => {
   it('loads the homepage', () => {
     cy.visit('/')
   })
